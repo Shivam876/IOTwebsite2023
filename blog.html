@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.hero {
+   
+    color: #fff;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-image: url(../Technology-Watch.jpg) ; */
+    background-repeat: no-repeat;
+    background-position-x: 20px;   
+}
+.content {
+    z-index: 1;
+    opacity: 0;
+    margin-top: 100px;
+    animation: 0.5s slidefade 0.5s forwards;
+    color:red;
+    font-size: large;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ 
+
+/*--blog--------------------------*/
+#blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.blog-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.blog-heading span{
+    color: #f33c3c;
+}
+.blog-heading h3{
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    font-weight: 600;
+}
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+    background-color: #f7f7f7;
+}
+
+
+.blog-box{
+    width:350px;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    margin: 20px 20px;
+ 
+}
+.blog-img{
+    width:100%;
+    height: auto;
+    width: 100%;
+    
+}
+.blog-img:hover{
+    transform: scale(1.1);
+}
+
+.blog-img img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.blog-text span{
+    color: #f33c3c;
+    font-size: 0.9rem;
+}
+.blog-text .blog-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #272727;
+}
+.blog-text p{
+    color: #9b9b9b;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text a{
+    color: #0f0f0f;
+}
+.blog-text a:hover{
+    color: #c74242;
+    transition: all ease 0.3s;
+}
+.new{
+    font-size: 40px;
+    text-align: center;
+}
+.add-blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+#add-blog{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(../contact.png);
+}
+.add-blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+ .add-blog-box input,
+ .add-blog-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+ }
+ .add-blog form{
+width: 40%;
+ }
+ .add-blog label{
+    font-size: 1.3rem;
+
+ }
+ 
+@media(max-width:1250px){
+ 
+    .blog-box{
+        width: 300px;
+    }
+} 
+@media(max-width:1100px){
+    .blog-box{
+        width:70%;
+    }
+}
+ 
+@media(max-width:550px){
+   
+    .blog-box{
+        margin: 20px 10px;
+        width: 100%;
+    }
+    #blog{
+        padding:20px;
+    }
+}
+
+/* --------button------- */
+a.btn {
+   font-size: 30px;
+    border-radius: 47px 47px 47px 47px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #4286f4;
+    opacity: 1;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+}
+
+a.btn:hover {
+    color: black;
+    background-color: white;
+    border-color: rgb(156, 156, 156);
+}
+#btn{
+    background-color: #ececec;
+    margin: 10px;
+    padding: 10px;
+}
+#addblog{
+    font-size: 38px;
+    padding: 35px;
+} 
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+    border: 1px solid rgb(126, 124, 124);
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    color: white;
+    background: #f44336;
+    transition: 1s;
+}
+    </style>
+
+</head>
+<body>
+    <!-- <section id="home"> -->
+    <section class="sub2-header">
+        <nav>
+            <a href="index.html"><img src="imgs/iotcloud.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="project.html">PROJECTS</a></li>
+                    <div class="dropdown">
+                        <a class="nav-links ul li"><button class="dropbtn">PLACEMENT</button></a>
+                        <div class="dropdown-content">
+                          <a href="alumni.html">Alumni</a>
+                          <a href="Team.html">The Team</a>
+                        </div>
+                      </div>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="CONTACT.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+        </nav>
+        <h1 class="prosize">BLOGS</h1>
+    </section>
+    <section id="blog">
+
+
+        <!--container---------------->
+        <div class="blog-container">
+
+            <!--box-1------------->
+            <div class="blog-box">
+
+                <!--img---->
+                <div class="blog-img">
+                    <img src="imgs/smart home'.jpg" alt="blog">
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>18 July 2021 / Web Design</span>
+                    <a href="bloghandler.html.html" class="blog-title">Smart Homes: How IoT is Transforming the Way We Live</a>
+                    <p>The Internet of Things (IoT) is revolutionizing the way we live, and one of the most exciting applications of this technology is in the realm of smart homes. Smart homes are houses that use IoT technology to connect and control various appliances and systems, including lighting, heating and cooling, security, and entertainment. These devices can communicate with each other and with the internet, providing homeowners with unprecedented control and convenience.
+
+                        One of the most significant benefits of IoT-enabled smart homes is energy efficiency. Smart thermostats can learn the preferences of the homeowner and automatically adjust the temperature to save energy, while smart lighting can turn on and off based on occupancy or time of day. Smart appliances, such as washing machines and dryers, can also be programmed to run during off-peak hours when energy rates are lower.
+                        
+                        Another benefit of smart homes is improved security. Smart locks and cameras can be controlled remotely through a smartphone app, allowing homeowners to monitor and control access to their homes from anywhere in the world. Smart smoke detectors and carbon monoxide sensors can also alert homeowners to potential dangers and contact emergency services when necessary.
+                        
+                        Finally, smart homes can also offer convenience and comfort. Smart speakers can be used to play music, order groceries, and even control other smart devices. Voice-activated assistants can also be used to adjust lighting, temperature, and other settings, making it easy to create a comfortable and personalized living environment.
+                        
+                        In conclusion, IoT-enabled smart homes offer a wide range of benefits, from energy efficiency and security to convenience and comfort. As the technology continues to evolve, we can expect to see even more advanced applications of IoT in the home, making smart homes an essential part of our daily lives.</p>
+                    <a href="bloghandler.html.html">Read More</a>
+                </div>
+
+            </div>
+
+
+
+
+            <!--box-2------------->
+            <div class="blog-box">
+
+                <!--img---->
+                <div class="blog-img">
+                    <img src="imgs/BLOG IMG/transport.jpg" alt="blog">
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>18 July 2021 / Web Design</span>
+                    <a href="bloghandler.html.html" class="blog-title">The Future of Transportation: IoT and Connected Cars</a>
+                    <p>The Internet of Things (IoT) is changing the way we move from one place to another. With IoT technology, cars can be connected to other devices and networks, allowing for increased safety, efficiency, and convenience. Connected cars use sensors, cameras, and other devices to collect and transmit data, which can be used to improve the driving experience.
+
+                        One of the most significant benefits of IoT-enabled transportation is increased safety. Connected cars can communicate with other vehicles, traffic signals, and road infrastructure, providing real-time information about road conditions and potential hazards. This information can be used to alert drivers and even take action to avoid accidents.
+                        
+                        Another benefit of connected cars is improved efficiency. IoT technology can be used to optimize traffic flow, reduce congestion, and improve fuel efficiency. Connected cars can also provide real-time traffic updates and suggest alternate routes, reducing travel time and fuel consumption.
+                        
+                        Finally, connected cars can also offer increased convenience. Drivers can use their smartphones to remotely start their cars, adjust climate control, and even order food and drinks from nearby restaurants.
+                        
+                        In conclusion, the future of transportation is being transformed by IoT technology and connected cars. These vehicles offer increased safety, efficiency, and convenience, making them an essential part of our daily lives. As the technology continues to evolve, we can expect to see even more advanced applications of IoT in the world of transportation, creating a safer, more efficient, and more enjoyable driving experience.</p>
+                    <a href="bloghandler.html.html">Read More</a>
+                </div>
+
+            </div>
+
+
+
+
+            <!--box-3------------->
+            <div class="blog-box">
+
+                <!--img---->
+                <div class="blog-img">
+                    <img src="imgs/BLOG IMG/agriculture.jpg" alt="blog">
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>18 July 2021 / Web Design</span>
+                    <a href="bloghandler.html.html" class="blog-title">The Role of IoT in Agriculture: Improving Efficiency and Sustainability</a>
+                    <p>The Internet of Things (IoT) is transforming the world of agriculture, offering new ways to improve efficiency and sustainability. With IoT technology, farmers can collect and analyze data on a range of factors, including weather, soil conditions, and plant growth, to make better decisions about planting, fertilization, and irrigation.
+
+                        One of the most significant benefits of IoT in agriculture is improved efficiency. IoT devices, such as sensors and drones, can be used to monitor crops and livestock, providing real-time information on their health and growth. This information can be used to optimize planting and harvesting times, reduce waste, and improve yields.
+                        
+                        Another benefit of IoT in agriculture is increased sustainability. IoT technology can be used to reduce the use of water, fertilizer, and other resources, while also minimizing the impact of farming on the environment. This can help farmers to meet sustainability goals and reduce costs over the long term.
+                        
+                        Finally, IoT in agriculture can also offer increased safety. Farmers can use drones and other devices to monitor and detect potential hazards, such as fires or floods, and take action to protect their crops and livestock.
+                        
+                        In conclusion, IoT technology is transforming the world of agriculture, offering new ways to improve efficiency, sustainability, and safety. As the technology continues to evolve, we can expect to see even more advanced applications of IoT in the agricultural sector, creating a more sustainable and productive future for farming.</p>
+                    <a href="bloghandler.html.html">Read More</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- //// -->
+        <section id="blog">
+
+
+            <!--container---------------->
+            <div class="blog-container">
+    
+                <!--box-1------------->
+                <div class="blog-box">
+    
+                    <!--img---->
+                    <div class="blog-img">
+                        <img src="imgs/BLOG IMG/iiot.jpg" alt="blog">
+                    </div>
+                    <!--text--->
+                    <div class="blog-text">
+                        <span>18 July 2021 / Web Design</span>
+                        <a href="bloghandler.html.html" class="blog-title">Industrial IoT: How Connected Devices are Revolutionizing Manufacturing</a>
+                        <p>The Industrial Internet of Things (IIoT) is changing the way manufacturers operate by creating connected factories and supply chains. IIoT enables the use of sensors, smart devices, and data analytics to monitor and optimize industrial processes, making them more efficient and cost-effective.
+
+                            One of the main benefits of IIoT is improved operational efficiency. Connected sensors can be used to monitor equipment, such as machines or conveyors, in real-time, allowing for predictive maintenance to prevent unexpected downtime. This helps reduce costs and improve productivity.
+                            
+                            Another benefit is the ability to optimize supply chains. With IIoT, manufacturers can track inventory, shipments, and deliveries in real-time, helping to reduce lead times, cut costs, and improve customer satisfaction.
+                            
+                            Additionally, IIoT enables manufacturers to implement more sustainable practices. By monitoring energy consumption, for example, manufacturers can identify areas of waste and reduce their carbon footprint.
+                            
+                            In conclusion, IIoT is revolutionizing the manufacturing industry by creating connected factories and supply chains. The use of sensors, smart devices, and data analytics is helping to improve operational efficiency, optimize supply chains, and implement sustainable practices. As IIoT continues to evolve, we can expect to see even more advanced applications, creating even more efficient and effective manufacturing operations.</p>
+                        <a href="bloghandler.html.html">Read More</a>
+                    </div>
+    
+                </div>
+    
+    
+    
+    
+                <!--box-2------------->
+                <div class="blog-box">
+    
+                    <!--img---->
+                    <div class="blog-img">
+                        <img src="imgs/BLOG IMG/lock.jpg" alt="blog">
+                    </div>
+                    <!--text--->
+                    <div class="blog-text">
+                        <span>18 July 2021 / Web Design</span>
+                        <a href="bloghandler.html.html" class="blog-title">IoT Security: Protecting Your Devices and Data from Cyber Threats</a>
+                        <p>The Internet of Things (IoT) has brought about numerous benefits to our daily lives, but it also poses a security risk. As more devices become connected, they become vulnerable to cyber attacks. It is crucial to take steps to protect your IoT devices and data from these threats.
+
+                            One of the most critical steps is to keep your devices updated with the latest security patches and software updates. Manufacturers often release these updates to address known security vulnerabilities. By keeping your devices updated, you can protect yourself from known threats.
+                            
+                            Another essential step is to use strong passwords and enable two-factor authentication. This can prevent unauthorized access to your devices and data.
+                            
+                            Furthermore, it's crucial to only use trusted and secure networks. Public Wi-Fi networks are often unsecured, and hackers can use them to gain access to your devices and data. Always use a virtual private network (VPN) when using public Wi-Fi to encrypt your data and protect your privacy.
+                            
+                            Finally, it's essential to be vigilant and monitor your devices regularly. Look for signs of suspicious activity, such as changes in settings or unusual network activity.
+                            
+                            In conclusion, IoT security is critical to protecting your devices and data from cyber threats. By keeping your devices updated, using strong passwords and two-factor authentication, only using secure networks, and being vigilant, you can minimize the risk of being hacked. Taking these steps can help ensure that you can continue to enjoy the benefits of IoT technology without putting yourself at risk.</p>
+                        <a href="bloghandler.html.html">Read More</a>
+                    </div>
+    
+                </div>
+    
+    
+    
+    
+                <!--box-3------------->
+                <div class="blog-box">
+    
+                    <!--img---->
+                    <div class="blog-img">
+                        <img src="imgs/BLOG IMG/bigdata.jpg" alt="blog">
+                    </div>
+                    <!--text--->
+                    <div class="blog-text">
+                        <span>18 July 2021 / Web Design</span>
+                        <a href="bloghandler.html.html" class="blog-title">IoT and Big Data: How Connected Devices are Changing the Way We Collect and Analyze Information</a>
+                        <p>The rise of the Internet of Things (IoT) has revolutionized the way we collect and analyze data. By connecting everyday devices to the internet, we are able to gather vast amounts of data in real-time, providing insights and opportunities for businesses and organizations to optimize their operations and improve customer experiences.
+
+                            IoT devices such as sensors, wearables, and smart appliances generate massive amounts of data that can be analyzed using big data analytics tools. With the ability to process and analyze this data, businesses can make informed decisions and gain a competitive edge in their respective industries.
+                            
+                            For example, in the healthcare industry, IoT devices can monitor patients in real-time, collecting data on vital signs, medication adherence, and other important metrics. This data can be analyzed using big data analytics tools to identify trends and patterns, allowing healthcare providers to make more informed decisions about patient care.
+                            
+                            Similarly, in the retail industry, IoT devices can collect data on customer behavior, such as browsing habits and purchase history. This data can be used to personalize marketing efforts and improve the customer experience, leading to increased sales and customer loyalty.
+                            
+                            Overall, the combination of IoT and big data is changing the way we collect and analyze information, providing businesses and organizations with valuable insights that can drive growth and innovation.</p>
+                        <a href="bloghandler.html.html">Read More</a>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </section>
+
+    </section>
+
+    <!-- -----------add blog------- -->
+
+    <section id="btn">
+      
+        <center>
+            <p id="addblog">Add New Blog</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSbEswVnmnXSi7nWPzJ2BNRf4T_Pjl8VQEixvZ8u4ddtcdrQ/viewform?usp=sharing" class="hero-btn">ADD YOUR BLOG</a>
+        <!-- <a class="btn"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfSbEswVnmnXSi7nWPzJ2BNRf4T_Pjl8VQEixvZ8u4ddtcdrQ/viewform?usp=sharing">
+            Click here to add your blog</a> -->
+
+        </center>
+    </section>
+    <section class="footer">
+        <h1>About Initiative</h1>
+        <p>IoT Initiative serves as a public place where students can learn about, and work on IoT related projects.<br>
+
+            ___________<br>
+            
+            The IoT Initiative is supported by both internal and external professionals who help students plan strategies and activities that will help them with knowledge and skills in IoT. <br>
+            
+            ___________ <br>
+            
+            This Initiative organizes the events like seminars, workshops, hands-on trainings, competitions and many more, So join the Initiative and stay tuned. <br>
+            
+            ___________</p>
+        <div class="role">
+        <div class="icon">
+            <i class="fa fa-facbook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+              <p> © Faculty of Science, Dayalbagh Educational Institute, Agra (282005)</p>
+        </div>
+    </section>
+
+    
+    <!-- ---------Add comment------- -->
+    <!-- <p class="new">Add Comment</p> -->
+    <!-- <section id="add-blog"> -->
+
+
+        <!--container---------------->
+        <!-- <div class="add-blog-container"> -->
+
+            <!--box-1------------->
+            <!-- <div class="add-blog-box"> -->
+                <!-- ---------form------ -->
+                <!-- <form action="">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label for="name">Phone number:</label>
+                        <input type="number" name="Phone number" id="Phone number"
+                            placeholder="Enter your phone number">
+                    </div>
+                    <div>
+                        <label for="name">Email:</label>
+                        <input type="email" name="Email" id="Email" placeholder="Enter your email ">
+                    </div>
+                    <div>
+                        <label for="name">Comment</label>
+                        <textarea name="message" id="message" cols="90" rows="10"
+                            placeholder="write your comment"></textarea>
+                    </div>
+
+                </form> -->
+<script>
+    var navLinks= document.getElementById("navLink");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
